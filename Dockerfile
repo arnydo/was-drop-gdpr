@@ -1,4 +1,4 @@
-FROM node:0.12
+FROM node:6
 
 LABEL MAINTAINER Prolike/drop-gdpr.io
 
