@@ -1,15 +1,16 @@
-FROM node:6
+FROM node:10
 
 LABEL MAINTAINER Prolike/drop-gdpr.io
 
-VOLUME /opt/youtransfer/config 		
+VOLUME /opt/youtransfer/config
 VOLUME /opt/youtransfer/uploads
 
 WORKDIR /opt/youtransfer/
 
-RUN npm install youtransfer -g
-RUN youtransfer init
+COPY . /opt/youtransfer/.
+
 RUN npm install
+
 
 EXPOSE 5000
 
